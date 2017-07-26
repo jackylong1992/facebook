@@ -1,0 +1,33 @@
+<html>
+<head>
+<script>
+function poststatus(event) {
+	//var name = "jacky";
+	//var pass = "1234"
+	//console.log(document.getElementById("username").value);
+	var name = document.getElementById("username").value;
+	var pass = document.getElementById("password").value;
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("txtHint").innerHTML = this.responseText;
+		}
+	};
+	var url="doc.php"+"?fname="+name+"&fpass="+pass;
+	xmlhttp.open("POST", url, true);
+	xmlhttp.send();
+
+}
+</script>
+</head>
+<body>
+
+<p><b>Start typing a name in the input field below:</b></p>
+<div> 
+Name<input type="text" id="username" onkeyup="">
+Password<input type="text" id = "password" onkeyup="">
+<input id="status" onclick="poststatus(event)" type="button" value="Sign in">
+</div>
+<p>Suggestions: <span id="txtHint"></span></p>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="facebook.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body onload="main()">
+<script src="facebook.js"></script>
+
+
+<div id="bar">
+  <img class="changecolor" src="facebook.jpg" style="width:30px;height:30px;margin-top:0px;margin-left:190px; padding-left:10px; padding-right:10px;">
+  <input class="search" id ="search" type="text" size="50" onclick="" onkeydown="" value = "Search for people, location, everythings !!!" style="display:inline-block;position:relative;bottom:10px;"> 
+  <p class="changecolor" style="display:inline-block;position:relative;color:white;padding:5px;bottom:10px;margin-left:300px;">    Your profile </p>
+  <p class="changecolor" style="display:inline-block;position:relative;color:white;padding:5px;bottom:10px;margin-left:30px">    Home </p>
+</div>
+
+<div id="first">
+  <li><a href="https://www.w3schools.com">    Your Group 1  </a></li> 
+  <li><a href="https://www.w3schools.com">    Your Group 2  </a></li> 
+  <li><a href="https://www.w3schools.com">    Your Group 3  </a></li> 
+</div>
+
+<div id="second">
+  <li onclick="friendclick(event)"><a >   Your Contact 1 <i class="material-icons" style="color:red;padding-left: 130px;opacity: 1;">favorite</i></a></li> 
+  <li onclick="friendclick(event)"><a >   Your Contact 2 <i class="material-icons" style="color:red;padding-left: 130px;opacity: 1;">favorite</i></a></li> 
+  <li onclick="friendclick(event)"><a >   Your Contact 3 <i class="material-icons" style="color:red;padding-left: 130px;opacity: 1;">favorite</i></a></li> 
+  <input class="search" id ="search" type="text" size="36" onclick="" onkeydown="" value = "Search for people !!!"> 
+</div>
+
+<div id="third">
+  <li id="li1" style="visibility:hidden;"><p class="chatbox" style="color:white;" onclick="hidechatbox(event)">    Chat box 1 </p>
+  <input class="chat" id="chat1" type="text" size="24" onclick="comment(event)" onkeydown="uniKeyCodechat(event)" value = "chat here !!!"> 
+  </li> 
+  <li id="li2" style="visibility:hidden;"><p class="chatbox" style="color:white;" onclick="hidechatbox(event)">    Chat box 2 </p>
+  <input class="chat" id="chat2" type="text" size="24" onclick="comment(event)" onkeydown="uniKeyCodechat(event)" value = "chat here !!!"> 
+  </li> 
+  
+</div>
+
+<article id="ar0" class="mystatus">
+  <p style="color:pink"> <b>   Hi, What is your status? </b></p>
+  <textarea id="statusbox" rows="4" cols="60" onclick="comment(event)">Your status here!!!</textarea>
+  <input id="status" onclick="poststatus(event)" type="button" value="Post!">
+</article>
+
+<article id="ar1" class="feed">	
+  <p style="color:blue;">    Harvey has posted on this movie </p>
+  <img src="mypicture.jpg" id="samplepicture" align="middle" style="width:400px;height:400px;">
+  <div class="likebar" id="likebar">
+	<p class="likebutton" onclick="like(event)" id="samplelikebutton">Like</p>
+	<p class="likebutton">Share</p>
+	<p class="likebutton">Comment</p>
+  </div>
+  <div class="likeicon" id="likeicon">
+	<img  src="like.jpg" style="width:30px;height:30px;display: inline-block; position:relative">
+	<p class="likebutton" style="display: inline-block; position:relative">0</p>
+  </div>
+  <input class="comment" id ="in1" type="text" size="52" onclick="comment(event)" onkeydown="uniKeyCode(event)" value = "Comment here !!!"> 
+
+</article>
+
+<article id="ar2" class="feed">
+  <p style="color:blue;">    Ben has posted on this movie </p>
+  <img src="mypicture1.jpg" align="middle" style="width:400px;height:400px;">
+   <div class="likebar">
+	<p class="likebutton" onclick="like(event)">Like</p>
+	<p class="likebutton">Share</p>
+	<p class="likebutton">Comment</p>
+  </div>
+  <div class="likeicon">
+	<img  src="like.jpg" style="width:30px;height:30px;display: inline-block; position:relative">
+	<p class="likebutton" style="display: inline-block; position:relative">0</p>
+  </div>
+  <input class="comment" id ="in2" type="text" size="52" onclick="comment(event)" onkeydown="uniKeyCode(event)" value = "Comment here !!!"> 
+</article>
+
+</body>
+</html>

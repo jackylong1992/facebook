@@ -1,0 +1,41 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="index.css">
+<script>
+function poststatus(event) {
+	var name = document.getElementById("username").value;
+	var pass = document.getElementById("password").value;
+	document.cookie = name;
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (this.readyState == 4 && this.status == 200) {
+			document.getElementById("txtHint").innerHTML = this.responseText;
+			if (document.getElementById("txtHint").innerHTML == "authorized") {
+				window.location.assign("main/index.html");
+			}
+		}
+	};
+	var url="processuser.php"+"?fname="+name+"&fpass="+pass;
+	xmlhttp.open("POST", url, true);
+	xmlhttp.send();
+
+}
+</script>
+</head>
+<body>
+<div id="bar">
+  <img class="changecolor" src="facebook.jpg" style="width:30px;height:30px;margin-top:0px;margin-left:190px; padding-left:10px; padding-right:10px;">
+  <input class="search" id ="search" type="text" size="50" onclick="" onkeydown="" value = "Search for people, location, everythings !!!" style="display:inline-block;position:relative;bottom:10px;"> 
+  <p class="changecolor" style="display:inline-block;position:relative;color:white;padding:5px;bottom:10px;margin-left:300px;">    Your profile </p>
+  <p class="changecolor" style="display:inline-block;position:relative;color:white;padding:5px;bottom:10px;margin-left:30px">    Home </p>
+</div>
+<p><b>Start typing a name in the input field below:</b></p>
+<div id="signin"> 
+Name<input type="text" id="username" onkeyup="">
+Password<input type="text" id = "password" onkeyup="">
+<input onclick="poststatus(event)" type="button" value="Sign in">
+<p>Suggestions: <span id="txtHint"></span></p>
+</div>
+
+</body>
+</html>

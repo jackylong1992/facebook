@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    width: 1850px;
+    //height: 2000px;
+	background-color: #f1f1f1;
+}
+div#bar {
+    width: 1900px;
+	height: 40px;
+    background-color: #4267b2;
+	//background-color: pink;
+    position: fixed;
+    overflow: hidden;
+	display: inline;
+	border-style: solid;
+	border-width: 1px;
+    border-color: pink;
+	margin-left: ;
+}
+div#first {
+    list-style-type: none;
+    width: 300px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 900px;
+    overflow: auto;
+	display: inline-block;
+	border-style: solid;
+	border-width: 1px;
+    border-color: pink;
+	margin-top: 41px;
+	margin-left: 200px;
+}
+
+div#second {
+	list-style-type: none;
+	margin-left: 1608px;
+	padding: 0;
+    width: 290px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 900px;
+    overflow: auto;
+	display: inline-block;
+	border-style: solid;
+	border-width: 1px;
+    border-color: pink;
+	margin-top: 41px;
+}
+
+div#third {
+	list-style-type: none;
+	padding: 0;
+    //background-color: black ;
+    position: fixed;
+    overflow: auto;
+	display: inline-block;
+	right: 285px;
+	margin-top: 640px;
+}
+
+
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+	//background-color: #4CAF50;
+}
+
+.changecolor:hover{
+	background-color: blue;
+}
+li a:hover {
+    background-color: #555;
+    color: red;
+}
+
+div#bar p:hover {
+	background-color: blue;
+}
+
+li a.active{
+	background-color: blue;
+}
+
+li a#hidden{
+	opacity: 1;
+}
+
+div#third li {
+	list-style-type: none;
+	float: right;
+	margin-right: 10px;
+	width: 200px;
+	height: 300px;
+	border-style: solid;
+	border-width: 1px;
+    border-color: gray;
+	padding-top: 0px;
+}
+
+div#third input {
+	position: absolute;
+	bottom: 0px;
+}
+div#second input {
+	position: absolute;
+	bottom: 0px;
+	margin-left:2px;
+}
+div.chatbox{
+	float: right;
+	margin-right: 10px;
+	width: 200px;
+	height: 300px;
+	border-style: solid;
+	border-width: 1px;
+    border-color: gray;
+	padding-top: 0px;
+}	
+article.feed {
+    border-style: solid;
+	border-width: 1px;
+    border-color: pink;
+	position: static;
+	display: inline-block;
+	margin-left: 501px;
+	width: 500px;
+	//height: 2000px;
+	margin-top: 10px;
+}
+
+article.mystatus {
+    border-style: solid;
+	border-width: 1px;
+    border-color: pink;
+	position: static;
+	display: inline-block;
+	margin-left: 501px;
+	width: 500px;
+	margin-top: 40px;
+}
+
+article:not(.mystatus):not(.feed) {
+    border-style: solid;
+	border-width: 1px;
+    border-color: pink;
+	position: static;
+	display: inline-block;
+	margin-left: 501px;
+	width: 500px;
+	margin-top: 10px;
+}
+
+article{
+	background-color: white;
+	margin:5px;
+}
+/*
+article#ar0 input.comment{
+	height: 100px;
+	overflow: auto;
+}
+*/
+img {
+	padding-left: 50px;
+}
+
+input.comment{
+	margin-left: 50px;
+	margin-top: 10px;
+}
+
+p.chatbox{
+	background-color: #4267b2;
+	text-align: center;	
+	margin-top: 0px;
+}
+
+.likebar {
+	height: 40px;
+	border-top-color: pink;
+	border-top-style: solid;
+	border-top-width: 1px;
+	margin-top: 5px;
+	margin-left: 50px;
+	margin-right: 50px;
+	//background-color: green;
+}
+
+.likebutton {
+	display: inline-block;
+	position: relative;
+	color: pink;
+	background-color: white;
+	padding: 5px;
+	bottom: 10px;
+}
+
+.likebutton:hover {
+	text-decoration:underline;
+	font-weight: bold;
+}
